@@ -57,8 +57,11 @@ document.getElementById('delivery-on-21st-btn').addEventListener('click', functi
 // discount allowed when coupon code is provided
 document.getElementById('basic-addon2').addEventListener('click', function () {
 
-    if (document.getElementById('coupon-code-input').value.toLowerCase() === 'stevekaku') {
+    if (document.getElementById('coupon-code-input').value.toLowerCase().trim() === 'stevekaku') {
         document.getElementById('total-price-footer').innerText = parseInt(document.getElementById('total-price').innerText) - (parseInt(document.getElementById('total-price').innerText) * (20 / 100));
         document.getElementById('coupon-code-input').value = '';
+        document.getElementById('show-warning').innerText = '';
+    } else {
+        document.getElementById('show-warning').innerText = 'The promo code is inappropriate. Please provide the correct one!';
     }
 });
