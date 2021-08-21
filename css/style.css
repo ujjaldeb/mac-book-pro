@@ -1,0 +1,22 @@
+/* general rules */
+body {
+    margin: 0;
+}
+
+/* element specific rules */
+.bold {
+    font-weight: bold;
+}
+
+#basic-addon2 {
+    background-color: brown;
+    color: #ffffff;
+}
+
+
+/* media query css */
+@media (max-width: 575px){
+    .top-heading > h1, .top-heading > p {
+        text-align: center;
+    }
+}
